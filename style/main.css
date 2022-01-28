@@ -18,6 +18,7 @@ img {
   margin-left: auto;
   padding-right: 1em;
   padding-left: 1em;
+  max-width: 980px;
 }
 
 /* ----------------------- */
@@ -33,6 +34,7 @@ img {
   color: #fff;
   font-weight: bold;
   float: left;
+  text-align: right;
 }
 
 .header__nav {
@@ -127,6 +129,21 @@ img {
 .people-cards__card {
 }
 
+.people-cards__card:hover {
+  outline: 5px solid #63c6ae;
+  outline-offset: -5px;
+}
+
+.people-cards__card:hover .people-cards__avatar img {
+  transform: translateY(-88px);
+}
+
+.people-cards__card:hover .people-cards__title,
+.people-cards__card:hover .people-cards__text {
+  color: #63c6ae;
+  transition: 0.5s ease-in-out;
+}
+
 .people-cards__image {
   width: 100%;
 }
@@ -147,9 +164,218 @@ img {
 .people-cards__title {
   color: #737c85;
   font-size: 21px;
+  font-weight: normal;
 }
 
 .people-cards__text {
   color: #929da5;
   font-size: 14px;
+}
+
+/* --------------------------- */
+
+.content {
+  background-color: #f8f9f9;
+  padding: 20px 0 80px;
+  border-top: 1px solid #e3e3e3;
+}
+
+.content h3 {
+  color: #737c85;
+  font-size: 21px;
+  padding-top: 40px;
+  font-weight: 400;
+}
+
+.content p {
+  color: #929da5;
+  font-size: 14px;
+  word-spacing: 3px;
+}
+
+/* ------------------------------- */
+
+.button {
+  padding: 15px 40px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  margin-right: 15px;
+  display: inline-block;
+  transition: background 0.5s;
+}
+
+.button:hover {
+  background-color: #929da5;
+}
+
+.button-primary {
+  background-color: #69c6ae;
+  color: white;
+}
+
+.button-secondary {
+  background-color: #455357;
+  color: white;
+}
+
+/* ---------------------------------------- */
+
+.last-articles {
+}
+
+.last-articles__title {
+  background-color: #63c6ae;
+  padding: 5px 0;
+}
+
+.last-articles__title h2 {
+  font-size: 24px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.last-articles__thumbs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 0;
+}
+
+.last-articles__thumbs img {
+  display: block;
+  width: 100%;
+}
+
+/* ----------------------------------- */
+
+.laptop-slider {
+  background-color: #242a2c;
+  padding: 125px 0 100px;
+  width: 100%;
+  overflow: auto;
+}
+
+.slide-show {
+  white-space: nowrap;
+}
+
+.slide-show figure {
+  display: inline-block;
+}
+
+/* ----------------------------------- */
+
+.quote-container {
+  background-color: #63c6ae;
+  padding: 50px 0;
+  border-bottom: 12px solid #58b9a1;
+}
+
+.quote-slide-show {
+}
+
+.quote-slide-show h2 {
+  color: white;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.quote-slide-show figcaption {
+  color: white;
+  text-align: center;
+}
+
+.no-js .quote-slide-show figure + figure {
+  margin-top: 5em;
+}
+
+/* ----------------------------------- */
+
+.footer {
+  background-color: #242a2c;
+  padding: 50px 50px 250px;
+  color: #454e51;
+  font-size: 14px;
+}
+
+.footer__links li {
+  list-style: none;
+}
+
+.footer__links a {
+  color: #454e51;
+  display: block;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer__logo {
+  text-transform: uppercase;
+}
+
+/* ----------------------------------- */
+
+@media screen and (min-width: 1024px) {
+  .header {
+    position: fixed;
+  }
+
+  .logo-text {
+    width: 25%;
+    box-sizing: border-box;
+  }
+
+  .header__btn-menu {
+    display: none;
+  }
+
+  .header__nav {
+    float: left;
+    width: 75%;
+    clear: none;
+    max-width: 800px;
+  }
+
+  .header__nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .header__nav ul li {
+    border-bottom: none;
+    flex-grow: 1;
+  }
+
+  .header__nav a {
+    background-color: white;
+    display: block;
+  }
+
+  .people-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+  }
+
+  .content .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+  }
+
+  .last-articles__thumbs {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .footer .container {
+    display: flex;
+  }
+
+  .footer .container > * {
+    margin: 1.5em;
+  }
 }
