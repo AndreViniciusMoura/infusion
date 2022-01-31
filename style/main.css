@@ -21,6 +21,12 @@ img {
   max-width: 980px;
 }
 
+.js .header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
 /* ----------------------- */
 
 .logo-text {
@@ -69,6 +75,105 @@ img {
 }
 
 .header__btn-menu {
+  float: right;
+  margin: 1.5em;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+}
+
+.js .header__btn-menu {
+  cursor: pointer;
+}
+
+.js .header__nav {
+  transition: max-height 1s;
+}
+
+/* ----------------------------------------------- */
+
+.js .laptop-slider {
+  overflow: hidden;
+  color: white;
+}
+
+.js .laptop-slider .slide-show {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  max-width: 950px;
+}
+
+.js .laptop-slider figure {
+  opacity: 0;
+  transition: 1s opacity;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.js .laptop-slider figure.show {
+  opacity: 1;
+  position: static;
+}
+
+.js .laptop-slider .prev,
+.js .laptop-slider .next {
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+
+.js .laptop-slider .prev {
+  left: 10px;
+}
+
+.js .laptop-slider .next {
+  right: 10px;
+}
+
+/* ----------------------------------------------- */
+
+.js .quote-slide-show {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  max-width: 950px;
+  box-sizing: border-box;
+  padding: 0 50px;
+  color: white;
+}
+.js .quote-slide-show figure h2 {
+  margin-top: 0;
+}
+.js .quote-slide-show figure {
+  opacity: 0;
+  transition: 1s opacity;
+  position: absolute;
+  top: 0;
+  left: 50px;
+  right: 50px;
+  box-sizing: border-box;
+  margin: 0;
+}
+.js .quote-slide-show figure.show {
+  opacity: 1;
+  position: static;
+}
+.js .quote-slide-show .prev,
+.js .quote-slide-show .next {
+  z-index: 3;
+  position: absolute;
+  top: 30%;
+  cursor: pointer;
+}
+.js .quote-slide-show .prev {
+  left: 10px;
+}
+.js .quote-slide-show .next {
+  right: 10px;
 }
 
 /* --------------------------- */
@@ -319,7 +424,7 @@ img {
 
 /* ----------------------------------- */
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .header {
     position: fixed;
   }
